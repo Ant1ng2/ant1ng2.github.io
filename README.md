@@ -3,6 +3,9 @@
 
 This repository is meant to store interesting projects by me for preview with potential recruiters. Currently in development, will add more relevant projects later with project descriptions. 
 
+# Resume
+* [Resume](https://github.com/Ant1ng2/Projects/raw/master/3_8_19_resume.pdf): This resume was updated as of 3/8/19.
+
 ## Projects:
 * [AllQueenChess](https://github.com/Ant1ng2/FourQueens): A solver for the board game AllQueensChess. Also features a Unity demo of the game.
   * Currently in development
