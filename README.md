@@ -4,7 +4,7 @@
 This repository is meant to store interesting projects by me for preview with potential recruiters. Currently in development, will add more relevant projects later with project descriptions. 
 
 ## Resume
-* [Resume](https://github.com/Ant1ng2/Projects/raw/master/08_01_2019_resume.pdf): This resume was updated as of 8/3/19.
+* [Resume](resume/LaTeX/8_13_2019_resume.pdf): This resume was updated as of 8/13/19.
 
 ## Projects:
 
