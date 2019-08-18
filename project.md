@@ -1,7 +1,7 @@
 ---
-title: Projects
+title: Project
 layout: page
-permalink: /projects/
+permalink: project/
 ---
 ### Web Development:
 * [Audience1st](https://github.com/armandofox/audience1st): Part of the Audience1st UC Berkeley team of Spring 2019 and worked on many features.

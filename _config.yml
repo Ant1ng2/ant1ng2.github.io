@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   by me for preview with potential recruiters. 
   Currently in development, will add more relevant projects 
   later with project descriptions. 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/Projects" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: ant1ng2
 linkedin_username: ant1ng
@@ -30,9 +30,10 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 header_pages:
-  - projects.md
+  - project.md
   - resume.html
 
 # Exclude from processing.
