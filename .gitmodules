@@ -1,0 +1,6 @@
+[submodule "Ball-Game"]
+	path = Ball-Game
+	url = https://github.com/Ant1ng/Ball-Game.git
+[submodule "ATeam"]
+	path = ATeam
+	url = https://github.com/Ant1ng2/ATeam.git
