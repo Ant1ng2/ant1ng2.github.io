@@ -112,7 +112,6 @@
 \newenvironment{rSection2}[1]{
   \sectionskip
   \MakeUppercase{\bf #1} % Section title
-  [*] As of writing, currently taking.
   \sectionlineskip
   \hrule % Horizontal line
   \begin{multicols}{2}
