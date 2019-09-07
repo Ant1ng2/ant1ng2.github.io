@@ -7,6 +7,7 @@ permalink: project/
 * [Audience1st](https://github.com/armandofox/audience1st): Part of the Audience1st UC Berkeley team of Spring 2019 and worked on many features.
 
 ### Games:
+* [How to Get Away With Murder](https://chrislu.itch.io/how-they-got-away-with-murder): A game made in Unity, a stealth game that requires the player to clean up a murder without being caught. Uses Field of View raycasting on a 2D space.
 * [AllQueenChess](https://github.com/Ant1ng2/FourQueens): A solver for the board game AllQueensChess. Also features a Unity demo of the game.
   * Currently in development
 * [TicTacToe](https://github.com/Ant1ng2/Gamesolver): A solver for a game of TicTacToe. Currently working on functionality as well as using the solver for other games.
