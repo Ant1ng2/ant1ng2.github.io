@@ -13,7 +13,7 @@ permalink: project/
   * Worked on implementing chess from the Syzygy endgame tablebases.
 * [TicTacTree](https://www.kaggle.com/ant1ng/tttdecisiontree): Notebook developed to research the usage of Decision Trees as a way of compressing game key-value pairs.
 
-### Games and Solvers:
+### Games:
 <!--
 * [AllQueenChess](https://github.com/Ant1ng2/FourQueens): A solver for the board game AllQueensChess. Also features a Unity demo of the game.
   * Currently in development
