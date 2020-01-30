@@ -139,7 +139,7 @@
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
   \begin{list}{}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.3em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
