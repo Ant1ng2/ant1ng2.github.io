@@ -43,7 +43,7 @@ function init() {
         }
     }, false);  
     ctx = canvas.getContext("2d");
-    for (i = 0; i < 1; i++)
+    for (i = 0; i < 20; i++)
     {
         colors.push(getRandomColor());
         x.push(Math.round(Math.random() * canvas.width));
