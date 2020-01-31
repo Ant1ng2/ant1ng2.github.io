@@ -5,6 +5,14 @@ var dx = [];
 var dy = [];
 var colors = []
 
+var exitButton = {
+    x : 10,
+    y : 10, 
+    width : 20,
+    height : 20,
+    side : 20
+};
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -28,8 +36,14 @@ function init() {
         canvas.width=window.innerWidth;
         canvas.height=window.innerHeight;
     }
+    canvas.addEventListener('click', function (e) {
+        var mousePos = getMousePos(canvas, e);
+        if (isInside(mousePos, exitButton)) {
+            return toggleCanvas();
+        }
+    }, false);  
     ctx = canvas.getContext("2d");
-    for (i = 0; i < 20; i++)
+    for (i = 0; i < 1; i++)
     {
         colors.push(getRandomColor());
         x.push(Math.round(Math.random() * canvas.width));
@@ -72,6 +86,7 @@ function draw() {
         x[i]+=dx[i];
         y[i]+=dy[i];
     }
+    createExitButton();
 }
 
 function onKonamiCode(cb) {
@@ -85,6 +100,37 @@ function onKonamiCode(cb) {
         if (!key.indexOf(input)) return;
         input = e.keyCode == '38' ? '3838' : ('' + e.keyCode);
     });
+}
+
+function getMousePos(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+    };
+}
+
+function isInside(pos, rect) {
+    return pos.x >= rect.x && pos.x <= rect.x + rect.width && pos.y <= rect.y + rect.height && pos.y >= rect.y;
+}
+
+function createExitButton() 
+{
+    var x = exitButton['x']; 
+    var y = exitButton['y'];
+    var side = exitButton['side'];
+    var shift = side / x; 
+
+    ctx.fillStyle = "red";
+    ctx.fillRect(x, y, side, side);
+
+    ctx.beginPath();
+    ctx.moveTo(x + shift, y + shift);
+    ctx.lineTo(x + side - shift, y + side - shift);
+    ctx.moveTo(x + side - shift, y + shift);
+    ctx.lineTo(x + shift, y + side - shift);
+    ctx.strokeStyle = '#FFFFFF';
+    ctx.stroke();
 }
 
 onKonamiCode(function() {toggleCanvas()});
