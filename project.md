@@ -7,6 +7,8 @@ permalink: project/
 * [Audience1st](https://github.com/armandofox/audience1st): Part of the Audience1st UC Berkeley team of Spring 2019 and worked on many features.
 
 ### GamesCrafters:
+* [**GamesmanPuzzles**](https://github.com/GamesCrafters/GamesmanPuzzles): Python package that provides functionality to program and solve puzzles.
+  * Currently in development
 * [GameSolver](https://github.com/Ant1ng2/Gamesolver): Python package that provides functionality to program and solve games.
   * Currently in development
 * [Universal Web API](https://github.com/GamesCrafters/special-octo-garbanzo): Universal Web API used to link all of the GamesCrafters backends to provide game solutions.
