@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{enumitem}
+\usepackage{url}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Anthony Ling} % Your name
+\address{1-925-325-7144 \\ ant1ng@berkeley.edu \\ https://ant1ng2.github.io} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	CARRIER OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Career Objective}
+An enthusiastic senior in Computer Science seeking exciting internship opportunities in the field of artificial
+intelligence, data science, and software engineering.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf University of California, Berkeley} \hfill {August 2016 - Present} 
+\\ Bachelor of Art, Computer Science \hfill{GPA: 3.6}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	RELATED COURSEWORK SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection2}{Related Coursework}
+CS 70: Discrete Math and Probability Theory
+\\ CS 170: Eff. Alg. and Intractable Problems
+\\ CS 61B: Data Structures
+\\ CS 61C: Great Ideas in Computer Architecture
+\\ EECS 16A: Designing Info Devices and Systems
+\\ CS 188: Intro. to Artificial Intelligence
+\\ CS 169: Software Engineering
+\\ CS 186: Intro. to Databases
+\\ CS 189: Intro. to Machine Learning
+\\ EECS 127: Opt. Models and App.*
+\\ INFO 159: Natural Language Processing*
+\\ DATA 100: Principles and Tech. of Data Sci.*
+\end{rSection2}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages \ & Python, Java, HTML/CSS, Javascript, Markdown, SQL, C\# \\
+Web App Frameworks \ & Django, Ruby on Rails, Jekyll \\
+Software \& Tools & MS Office, LaTeX, G Suite, Adobe Illustrator, Unity \\
+Software Development & Test Automation, Docker, Bash Scripting, Git / SVN, Agile / Scrum
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Freddie Mac, McLean}{May 2019-August 2019}{Financial Engineering Intern}{} 
+    \item On-site internship under this government-sponsored enterprise.
+    \item Project 1: Developed data visualizations (Heatmaps, Bar charts, 3D) using Python libraries Bokeh and Pandas. The visualization system is used for housing loan risk analysis where feature recognition and correlation analysis are essential part of the algorithms and model development.
+    \item Project 2: Developed a Django web application that hosts the visuals of the data models. The web application is designed for direct and interactive access to the data by the users. The visualization is configurable by customizing axises and Django caching is deployed for high performance.
+\end{rSubsection}
+
+\begin{rSubsection}{Audience1st}{January 2019-May 2019}{Software Developer}{}
+    \item Part of an academic project where groups of students are assigned to small businesses or startups to work on some of their features of their web application. Most of the projects were done in Rails. Involved in many Software Engineer practices, such as continuous integration and user stories.
+    \item Worked on an application for Audience1st and implemented magic links and quality-of-life changes.
+\end{rSubsection}
+
+\end{rSection}
+
+\newpage
+
+\begin{rSection}{Academic Projects}
+
+\begin{rSubsection}{GamesCrafters}{2018-2020}{Research and Project Development}{}
+    \item Member of a group devoted to perfectly solving two-player games aka combinatorial and computational game theory.
+    \item Developed the GamesmanPuzzles Project to solve puzzles using bottom-up BFS. Showcases the results using a Web API through Flask.
+    \item Helped implement the Universal Web API to combine game solutions from the multiple GamesCrafters backends (ie GamesmanJava, GamesmanClassic). 
+    Specifically, worked on translating chess solutions from the Syzygy endgame tablebases from its public API.
+    \item Researched using Decision Trees as a way of compressing key-value pairs into a series of feature decisions (i.e. number of pieces on the board, whether the second piece is an "X" or an "O").
+\end{rSubsection}
+
+\begin{rSubsection}{DataBears, Berkeley}{2019}{Content Creator/TA}{}
+    \item Developed content for the SQLite lecture, which included a Jupyter Notebook lab, a Gradescope autograder environment, and a Introduction to Databases presentation.
+    \item Content covered relational database, DMS, SQL queries and Pandas interactions.
+\end{rSubsection}    
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching Experience} 
+\begin{rSubsection}{Education Enrichment Center, Pleasanton}{June 2018-August 2018}{Math Teacher/SAT Content Creator}{}
+\item Responsible for teaching adolescents math in preparation for the school year as well as developed a curriculum for SAT practice.
+\end{rSubsection}
+
+\begin{rSubsection}{Dept. of Computer Science, UC Berkeley}{2017-2018}{Tutor}{}
+\item CS 61A: Structure and Interpretation of Computer Programs, CS 61B: Data Structures
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Extra Curricular
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Extra-Curricucular} \itemsep -3pt
+President of the Amador Valley Game Design Club in 2016. \\
+Publicity Chair of the Berkeley Unit 4 Hall Association in 2016-2017 \\
+Programmer/Artist in the Game Design Club in 2019.
+\end{rSection}
+
+%
+%\begin{rSection}{Personal Traits}
+%Highly motivated and eager to learn new things. \\
+%Strong motivational and leadership skills. \\
+%Ability to work as an individual as well as in group. \\
+%Hardworking individual who is very passionate in his work. \\
+%Self-proclaimed hilarious/slightly awkward personality.
+\end{rSection}
+
+%-----------------------------------------------------------------------------------------
+% References
+%-----------------------------------------------------------------------------------------
+\begin{rSection}{References}
+James Naslund: \url{https://www.linkedin.com/in/jim-naslund-4031093/} \\
+Mason Chow: \url{https://www.linkedin.com/in/mason-chow-3502a89a/} \\
+Dan Garcia: \url{https://people.eecs.berkeley.edu/~ddgarcia/}
+\end{rSection}
+\end{document}
