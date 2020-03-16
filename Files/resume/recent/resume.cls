@@ -27,6 +27,8 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{multicol}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -138,10 +140,11 @@
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
-  \begin{list}{}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.2em \vspace{-0.5em} % Compress items in list together for aesthetics
+  \begin{itemize}{}{\leftmargin=5.5mm} % \cdot used for bullets, no indentation
+    \renewcommand\labelitemi{-}
+    \itemsep -0.2em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
-  \end{list}
+  \end{itemize}
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
