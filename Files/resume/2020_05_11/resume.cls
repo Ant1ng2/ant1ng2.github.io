@@ -22,23 +22,15 @@
 
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
-\usepackage[left=0.2in,top=0.2in,right=0.2in,bottom=0.2in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.3in,right=0.5in,bottom=0.6in]{geometry} % Document margins
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{multicol} % Columns for coursework
+\usepackage{multicol}
 \usepackage{enumitem}
 \setlist{leftmargin=4mm}
 
 \pagestyle{empty} % Suppress page numbers
-
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\LARGE} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
-\def\leftspace{0.0em}
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -76,20 +68,12 @@
   \addressskip
 }
 
-% \printheader is used to print the header as a page header
-\def \printheader {
-  \begin{list}{}{
-    \setlength{\leftmargin}{\leftspace}
-  }
-    \item{\MakeUppercase{\namesize\bf \@name} \hfill 
-    \@ifundefined{@addressone}{}{ % Print the first address if specified
-      \printaddress{\@addressone}}
-    \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-      \printaddress{\@addresstwo}}
-    \@ifundefined{@addressthree}{}{ % Print the third address if specified
-      \printaddress{\@addressthree}}
-    }
-  \end{list}
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
 }
 
 %----------------------------------------------------------------------------------------
@@ -99,7 +83,13 @@
 \let\ori@document=\document
 \renewcommand{\document}{
   \ori@document  % Begin document
-  \printheader % Print the name specified with \name
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -113,7 +103,7 @@
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{\leftspace} % Margin within the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
   }
   \item[]
 }{
@@ -125,11 +115,12 @@
 \newenvironment{rSection2}[1]{
   \sectionskip
   \MakeUppercase{\bf #1} % Section title
+  [*] As of writing, currently taking.
   \sectionlineskip
   \hrule % Horizontal line
   \begin{multicols}{2}
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{\leftspace} % Margin within the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
   }
   \item[]
 }{
@@ -156,3 +147,10 @@
   \end{itemize}
   \vspace{0.5em} % Some space after the list of bullet points
 }
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\LARGE} % Size of the name at the top of the document
+\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\nameskip{\bigskip} % The space after your name at the top
+\def\sectionskip{\medskip} % The space after the heading section
