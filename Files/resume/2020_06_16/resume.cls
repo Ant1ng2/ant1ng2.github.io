@@ -156,15 +156,3 @@
   \end{itemize}
   \vspace{0.5em} % Some space after the list of bullet points
 }
-
-\newenvironment{rSubsubsection}[2]{
-  \vspace{-0.5em}
-  {\em #1} \hfill {\em #2}
-  \smallskip
-  \begin{itemize}{}{\leftmargin=5.5mm} % \cdot used for bullets, no indentation
-    \renewcommand\labelitemi{-}
-    \itemsep -0.2em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{itemize}
-  \vspace{0.5em} % Some space after the list of bullet points
-}
