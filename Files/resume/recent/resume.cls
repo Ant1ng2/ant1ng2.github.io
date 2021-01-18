@@ -53,6 +53,7 @@
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
+\let \@addressfour \relax
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
 \def \address #1{
@@ -62,15 +63,18 @@
   \@ifundefined{@addressthree}{
   \def \@addressthree {#1}
   }{
+ \@ifundefined(@addressfour){
+ \def \@addressfour {#1}
+ }{
      \def \@addressone {#1}
-  }}
+  }}}
 }
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
   \begingroup
     \def \\ {\addressSep\ }
-    \centerline{#1}
+    \leftline{#1}
   \endgroup
   \par
   \addressskip
@@ -81,13 +85,15 @@
   \begin{list}{}{
     \setlength{\leftmargin}{\leftspace}
   }
-    \item{\MakeUppercase{\namesize\bf \@name} \hfill 
+    \item{\MakeUppercase{\namesize\bf \@name} \hfill
     \@ifundefined{@addressone}{}{ % Print the first address if specified
       \printaddress{\@addressone}}
     \@ifundefined{@addresstwo}{}{ % Print the second address if specified
       \printaddress{\@addresstwo}}
     \@ifundefined{@addressthree}{}{ % Print the third address if specified
       \printaddress{\@addressthree}}
+    \@ifundefined{@addressfour}{}{ % Print the four address if specified
+      \printaddress{\@addressfour}}
     }
   \end{list}
 }
